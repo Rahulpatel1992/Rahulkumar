@@ -1,0 +1,26 @@
+<form #employeeForm = "ngForm"(ngSubmit) ="onSubmit(employeeForm)">
+  <input type="hidden"name ="$key" #$key ="ngModel" [(ngModel)]="employeeservice.selectedEmployee.$key">
+  <div class="form-group">
+    <label>Name</label>
+    <input class="form-control" name="name" #name="ngModel" [(ngModel)]="employeeservice.selectedEmployee.name"placeholder="fullname">
+  </div>
+  <div class="form-group">
+    <label>position</label>
+    <input class="form-control" name="position" #name="ngModel" [(ngModel)]="employeeservice.selectedEmployee.position"placeholder="positions">
+  </div>
+  <div class="form-group">
+    <label>office</label>
+    <input class="form-control" name="office" #name="ngModel" [(ngModel)]="employeeservice.selectedEmployee.office"placeholder="office">
+  </div>
+  <div class="form-group">
+      <label>salary</label>
+      <input class="form-control" name="salary" #name="ngModel" [(ngModel)]="employeeservice.selectedEmployee.salary"placeholder="salary">
+    </div>
+  
+  <div class="form group">
+    <button type="submit"class="btn btn-default"><i class="fa fa-floppy-o" aria-hidden="true"></i> Submit</button>
+    <button type="button" class="btn btn-default" (click)="onDelete(employeeForm)"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
+    <button type="button" class="btn btn-default" (click)="resetForm()"><i class="fa fa-repeat" aria-hidden="true"></i> Reset</button>
+  </div>
+  </form>
+  <br>
